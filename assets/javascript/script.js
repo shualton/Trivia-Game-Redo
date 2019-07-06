@@ -30,7 +30,42 @@ var questions = [{
     ques: "Who is the only NBA player to win Finals MVP while on the losing team?",
     ans: ["Lebron James", "Michael Jordan", "Jerry West", "Magic Johnson"],
     name: "fmvp",
-    correct: "Jerry West",
+    correct: "Jerry",
     divClass: ".fmvp"
 },
+{
+    ques: "Who was the first unaminously voted MVP?",
+    ans: ["Lebron James", "Michael Jordan", "Kevin Durant", "Stephen Curry"],
+    name: "unanimous",
+    correct: "Stephen Curry",
+    divClass: ".unanimous"
+},
+{
+    ques: "Who was the youngest player to score 10,000 career points?",
+    ans: ["Lebron James", "Michael Jordan", "Kevin Durant", "Stephen Curry"],
+    name: "youngest",
+    correct: "Lebron James",
+    divClass: ".youngest"
+},
+{
+    ques: "Which team holds the record for longest win streak?",
+    ans: ["Los Angeles Lakers", "Golden State Warriors", "Boston Celtics", "Chicago Bulls"],
+    name: "streak",
+    correct: "Los Angeles Lakers",
+    divClass: ".streak"
+},
+{
+    ques: "Which player has won the most championships?",
+    ans: ["Bill Russell", "Michael Jordan", "Larry Bird", "Kareem Abdul-Jabbar"],
+    name: "championships",
+    correct: "Bill Russell",
+    divClass: ".championships"
+},
+{
+    ques: "Which player has won the most MVPs?",
+    ans: ["Lebron James", "Michael Jordan", "Larry Bird", "Kareem Abdul-Jabbar"],
+    name: "mvp",
+    correct: "Kareem Abdul-Jabbar",
+    divClass: ".mvp"
+}
 ] 
