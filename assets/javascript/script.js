@@ -132,15 +132,10 @@ var gradeQuiz = $('#sub-but').on('click', function() {
     };
     
     countdown();
-    $('.container').fadeOut(500);
-    $('#answerScreen').show();
-    $('#correctScreen').append(correctAnswers);
-    $('#wrongScreen').append(wrongAnswers);
-    if (correctAnswers === 10) {
-        $('#scoreMessage').append("Perfect score! You are a Pokémon MASTER!");
-    } else if (correctAnswers >= 5) {
-        $('#scoreMessage').append("Not bad, but I know you could do better!");
-    } else {
-        $('#scoreMessage').append("Oof...better luck next time...");
-    }
-    }); 
+// fade out questions
+$('.container').fadeOut(500);
+$('#answerScreen').show();
+$('#correctScreen').append(correctAnswers);
+$('#wrongScreen').append(wrongAnswers);
+}
+}); 
