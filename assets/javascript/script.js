@@ -69,7 +69,7 @@ var questions = [{
     divClass: ".mvp"
 }
 ] 
-
+var labels = ["first", "second", "third", "forth"];
 var questionDisplay = function() {
     $(".questions :not('#sub-but')").empty();
     for (var j = 0; j < 10; j++) {
@@ -134,8 +134,16 @@ var gradeQuiz = $('#sub-but').on('click', function() {
     countdown();
 // fade out questions
 $('.container').fadeOut(500);
-$('#answerScreen').show();
-$('#correctScreen').append(correctAnswers);
-$('#wrongScreen').append(wrongAnswers);
-}
+$('#answers').show();
+$('#correct').append(correctAnswers);
+$('#wrong').append(wrongAnswers);
+
 }); 
+
+
+var startGame = $("#start-btn").on('click', function() {
+    $(timesUp).hide();
+    $('.container').show();
+    countdown(60);
+    questionDisplay();
+    });
