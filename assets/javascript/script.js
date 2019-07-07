@@ -81,3 +81,36 @@ var questionDisplay = function() {
     $('.questions').prepend('<hr />');
     }
     }
+
+    var countdown = function(seconds) {
+
+        var timer = setInterval(function() {
+        seconds = seconds - 1;
+        $("#time-remain").html(seconds);
+        
+        if (seconds <= 0) {
+            $('.container').fadeOut(500);
+            var correctAnswers = 0;
+            var wrongAnswers = 0;
+        
+            for (var i = 0; i < 10; i++) {
+        
+                if ($('input:radio[name="' + questions[i].name + '"]:checked').val() === questions[i].correct) {
+        
+                    correctAnswers++;
+                } else {
+                    wrongAnswers++;
+                };
+            }
+            $('#correctTimesUp').append(correctAnswers);
+            $('#wrongTimesUp').append(wrongAnswers);
+            $('#timesUp').fadeIn(1000).show();
+            clearInterval(timer);
+            return;
+        }
+        }, 1000);
+
+        $('#sub-but').on('click', function() {
+            clearInterval(timer);
+    })
+};
