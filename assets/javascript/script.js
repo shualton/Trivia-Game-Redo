@@ -114,3 +114,33 @@ var questionDisplay = function() {
             clearInterval(timer);
     })
 };
+
+var gradeQuiz = $('#sub-but').on('click', function() {
+
+    var correctAnswers = 0;
+    var wrongAnswers = 0;
+    var unAnswered = 0;
+    
+    for (var i = 0; i < 10; i++) {
+    
+    if ($('input:radio[name="' + questions[i].name + '"]:checked').val() === questions[i].correct) {
+    
+        correctAnswers++;
+    } else {
+        wrongAnswers++;
+    };
+    };
+    
+    countdown();
+    $('.container').fadeOut(500);
+    $('#answerScreen').show();
+    $('#correctScreen').append(correctAnswers);
+    $('#wrongScreen').append(wrongAnswers);
+    if (correctAnswers === 10) {
+        $('#scoreMessage').append("Perfect score! You are a Pokémon MASTER!");
+    } else if (correctAnswers >= 5) {
+        $('#scoreMessage').append("Not bad, but I know you could do better!");
+    } else {
+        $('#scoreMessage').append("Oof...better luck next time...");
+    }
+    }); 
