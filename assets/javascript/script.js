@@ -134,6 +134,7 @@ var gradeQuiz = $('#sub-but').on('click', function() {
     countdown();
 // fade out questions
 $('.container').fadeOut(500);
+$('.home').fadeOut(500);
 $('#answers').show();
 $('#correct').append(correctAnswers);
 $('#wrong').append(wrongAnswers);
@@ -141,8 +142,9 @@ $('#wrong').append(wrongAnswers);
 }); 
 
 
+$(timesUp).hide();
+$(answers).hide();
 var startGame = $("#start-btn").on('click', function() {
-    $(timesUp).hide();
     $('.container').show();
     countdown(60);
     questionDisplay();
